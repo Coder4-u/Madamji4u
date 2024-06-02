@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Bhej Sakti Ho?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white; /* White Background */
+    height: 100vh; /* Set height to full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #pink-heart {
+    background: radial-gradient(circle, pink, transparent); /* Pink Heart Background */
+    padding: 20px;
+    border-radius: 50%;
+  }
+  
+  #question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: purple; /* Purple Text Color */
+  }
+  
+  #options {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+</style>
+</head>
+<body>
+  <div id="pink-heart">
+    <div id="question">Kya aap photo bhej sakti hain plzz🙏🙇?</div>
+    <div id="options">
+      <button id="yes" class="btn" onclick="showThankYou()">Yes</button>
+      <button id="no" class="btn" onclick="swapOptions()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function swapOptions() {
+      var yesBtn = document.getElementById("yes");
+      var noBtn = document.getElementById("no");
+      var optionsDiv = document.getElementById("options");
+      
+      optionsDiv.insertBefore(noBtn, yesBtn); // Swap positions
+      
+      // Alert user about the swap
+      alert("Ohh! Aap nahi bhejna chahti. Koi baat nahi. Ab kya karogi?");
+    }
+    
+    function showThankYou() {
+      alert("Mujhe pata tha, at last maan hi jaogi. Thank you! 🤗");
+    }
+  </script>
+</body>
+</html>
+
